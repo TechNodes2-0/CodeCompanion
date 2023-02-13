@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Code Checker Tool</title>
+    <title>CodeCompanion</title>
     <link rel="stylesheet" href="./main.css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="dark:bg-gray-800 flex flex-col justify-center gap-y-5">
-    <!---------------------------------- nav is start from here   ---------------------------------------------->
+    <!-- nav is start from here   -->
+
     <nav
       class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900"
     >
@@ -56,16 +57,16 @@
             <li>
               <a
                 href="./commit.html"
-                class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+                class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 aria-current="page"
-                >Commit Checker</a
+                >Comments Adder</a
               >
             </li>
             <li>
               <a
                 href="./timecom.html"
                 class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >Time Complexcity Finder</a
+                >Time Complexity Finder</a
               >
             </li>
             <li>
@@ -94,73 +95,123 @@
         </div>
       </div>
     </nav>
-    <!---------------------------- Main secrtion is start from here ---------------------------------------------->
-    <section class="dark:bg-gray-800">
-      <!---------------------------------- main container ---------------------------->
+    <!-- Main secrtion is start from here -->
+    <section class="gap-y-5">
       <div
-        class="relative w-10/12 gap-y-5 justify-between items-center mx-auto"
+        class="relative w-10/12 gap-y- 10 justify-between items-center mx-auto"
       >
-        <!------------------------- Text area -------------------------------->
-        <div class="flex flex-col dark:bg-gray-800 text-center gap-3">
-          <h1 class="font-bold text-[40px] leading-[1.2] text-white">
-            Code Checker Tool
-          </h1>
-          <p class="font-mono text-[18px] leading-7 text-white opacity-70">
-            Enter Your Code to Check Your Code
-          </p>
-        </div>
+        <!-- Text area in main sections -->
+
+        <!------------------------------ Heading Area ------------------------->
         <div>
-          <!----------------------------------- input area ------------------------------------->
-          <div>
-            <form>
-              <div
-                class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600"
+          <div class="text-center">
+            <h1
+              class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
+            >
+              CodeCompanion
+            </h1>
+            <p
+              class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400"
+            >
+              CodeCompanion is a comprehensive and user-friendly web-based tool
+              designed to support and enhance the development process for
+              software engineers
+            </p>
+            <a
+              href="https://github.com/TechNodes2-0/CodeCompanion"
+              class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
+            >
+              Learn more
+              <svg
+                class="w-5 h-5 ml-2 -mr-1"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <div class="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
-                  <div id="chat_container"></div>
-                  <label for="comment" class="sr-only">Your comment</label>
-                  <textarea
-                    id="comment"
-                    rows="4"
-                    name="prompt"
-                    class="w-full px-0 text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400 h-[285px]"
-                    placeholder="Write a code..."
-                    required
-                  ></textarea>
-                </div>
-                <div
-                  class="flex items-center justify-between px-3 py-2 border-t dark:border-gray-600"
-                >
-                  <button
-                    type="submit"
-                    id="check"
-                    class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800"
-                  >
-                    Submit Code
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-          <!-------------------------------- output area ------------------------------------------------->
-          <div>
-            <div class="dark:bg-gray-800">
-              <label
-                for="message"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >Your output</label
-              >
-              <textarea
-                id="message"
-                rows="4"
-                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 h-[285px]"
-                placeholder="Your output is here "
-              ></textarea>
-            </div>
+                <path
+                  fill-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- information sections -->
+    <section class="text-white">
+      <main class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900">
+        <div class="flex justify-between px-4 mx-auto max-w-screen-xl">
+          <article
+            class="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert"
+          >
+            <header class="mb-4 lg:mb-6 not-format">
+              <h1
+                class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white"
+              >
+                Code Companion Key feature
+              </h1>
+
+              <ul
+                class="max-w-md space-y-5 text-gray-500 list-disc list-inside dark:text-gray-400"
+              >
+                <li class="text-1xl font-extrabold dark:text-white my-3">
+                  Comments Adder
+                  <p
+                    class="font-mono text-[18px] leading-7 text-white opacity-70"
+                  >
+                    commit adder in code comapnion helps the user to add commits
+                    in code written in any programming language which can be
+                    understanded by any developers and helps to provide exact
+                    working of the perticular section.
+                  </p>
+                </li>
+                <li class="text-1xl font-extrabold dark:text-white my-3">
+                  Time Complexcity Finder
+
+                  <p
+                    class="font-mono text-[18px] leading-7 text-white opacity-70"
+                  >
+                    The space and time complexity analyzer provides performance
+                    insights and visual representations, helping developers
+                    optimize their code. The code explainer offers clear
+                    explanations of code snippets, making it easier to
+                    understand code written by others.
+                  </p>
+                </li>
+                <li class="text-1xl font-extrabold dark:text-white my-3">
+                  Code Checker
+                  <p
+                    class="font-mono text-[18px] leading-7 text-white opacity-70"
+                  >
+                    The error finder and resolver helps find and fix errors,
+                    saving time and effort on manual debugging. The tool
+                    provides clear explanations of errors and suggestions for
+                    resolution.
+                  </p>
+                </li>
+                <li class="text-1xl font-extrabold dark:text-white my-3">
+                  Code explainer
+                  <p
+                    class="font-mono text-[18px] leading-7 text-white opacity-70"
+                  >
+                    code explainer in code companion provides user the detailed
+                    explaination of the code written in any programming language
+                    and resolves any doubts related to perticular
+                    code to the user.
+                  </p>
+                </li>
+              </ul>
+            </header>
+          </article>
+        </div>
+      </main>
+    </section>
+
+    <!-- here is end -->
+
     <!-- Footer sections is start from here -->
     <section class="">
       <div class="">
@@ -207,7 +258,6 @@
         </footer>
       </div>
     </section>
-
     <script src="script.js"></script>
   </body>
 </html>

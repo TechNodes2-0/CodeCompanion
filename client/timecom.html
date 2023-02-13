@@ -4,13 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CodeCompanion</title>
+    <title>Time & Space Complexcity</title>
     <link rel="stylesheet" href="./main.css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="dark:bg-gray-800 flex flex-col justify-center">
-    <!-- nav is start from here   -->
-
+  <body class="dark:bg-gray-800 flex flex-col justify-center gap-y-5">
+    <!---------------------------------- nav is start from here   ---------------------------------------------->
     <nav
       class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900"
     >
@@ -59,14 +58,14 @@
                 href="./commit.html"
                 class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
                 aria-current="page"
-                >Commit Checker</a
+                >Comments Adder</a
               >
             </li>
             <li>
               <a
                 href="./timecom.html"
                 class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >Time Complexcity Finder</a
+                >Time Complexity Finder</a
               >
             </li>
             <li>
@@ -95,110 +94,70 @@
         </div>
       </div>
     </nav>
-    <!-- Main secrtion is start from here -->
-    <section>
+    <!---------------------------- Main secrtion is start from here ---------------------------------------------->
+    <section class="dark:bg-gray-800">
+      <!---------------------------------- main container ---------------------------->
       <div
         class="relative w-10/12 gap-y-5 justify-between items-center mx-auto"
       >
-        <!-- Text area in main sections -->
-        <div>
-          <div class="text-center">
-            <h1 class="font-bold text-[40px] leading-[1.2] text-white">
-              This is Home Page Of Code Compilion
-            </h1>
-            <p class="font-mono text-[18px] leading-7 text-white opacity-70">
-              To Use Our Tool is Easy to implment
-            </p>
-          </div>
+        <!------------------------- Text area -------------------------------->
+        <div class="flex flex-col dark:bg-gray-800 text-center gap-3">
+          <h1 class="font-bold text-[40px] leading-[1.2] text-white">
+            Time & Space complexity Finder
+          </h1>
+          <p class="font-mono text-[18px] leading-7 text-white opacity-70">
+            Enter Your Code to find The code of Time & Space Complexcity
+          </p>
         </div>
-        <!-- input area -->
         <div>
-          <form>
-            <div
-              class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600"
-            >
-              <div class="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
-                <div id="chat_container"></div>
-                <label for="comment" class="sr-only">Your comment</label>
-                <textarea
-                  id="comment"
-                  rows="4"
-                  class="w-full px-0 text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400 h-[375px]"
-                  placeholder="Write a comment..."
-                  required
-                ></textarea>
-              </div>
+          <!----------------------------------- input area ------------------------------------->
+          <div>
+            <form>
               <div
-                class="flex items-center justify-between px-3 py-2 border-t dark:border-gray-600"
+                class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600"
               >
-                <button
-                  type="submit"
-                  class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800"
+                <div class="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
+                  <div id="chat_container"></div>
+                  <label for="comment" class="sr-only">Your comment</label>
+                  <textarea
+                    id="comment"
+                    rows="4"
+                    name="prompt"
+                    class="w-full px-0 text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400 h-[285px]"
+                    placeholder="Write a code..."
+                    required
+                  ></textarea>
+                </div>
+                <div
+                  class="flex items-center justify-between px-3 py-2 border-t dark:border-gray-600"
                 >
-                  Submit Code
-                </button>
-                <div class="flex pl-0 space-x-1 sm:pl-2">
                   <button
-                    type="button"
-                    class="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
+                    type="submit"
+                    id="time"
+                    class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="w-5 h-5"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                    <span class="sr-only">Attach file</span>
-                  </button>
-                  <button
-                    type="button"
-                    class="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="w-5 h-5"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                    <span class="sr-only">Set location</span>
-                  </button>
-                  <button
-                    type="button"
-                    class="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="w-5 h-5"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                    <span class="sr-only">Upload image</span>
+                    Submit Code
                   </button>
                 </div>
               </div>
+            </form>
+          </div>
+          <!-------------------------------- output area ------------------------------------------------->
+          <div>
+            <div class="dark:bg-gray-800">
+              <label
+                for="message"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >Your output</label
+              >
+              <textarea
+                id="message"
+                rows="4"
+                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 h-[285px]"
+                placeholder="Your output is here "
+              ></textarea>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </section>
@@ -248,6 +207,7 @@
         </footer>
       </div>
     </section>
+
     <script src="script.js"></script>
   </body>
 </html>
