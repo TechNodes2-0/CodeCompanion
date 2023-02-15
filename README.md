@@ -36,7 +36,6 @@ We learned use of API's, tailwind css and how to integrate services like OPENAI 
 ## ⏭ What's next for -
 We want to integrate compiler for various languages like Java, C++,C , python and etc. 2.Adding new features and tools to further improve the coding experience, such as code auto-completion, code suggestion, and code optimization.
 
-How to Host in  Local Host 
 
 ## Installation 
 
