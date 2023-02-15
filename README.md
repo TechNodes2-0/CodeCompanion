@@ -13,7 +13,7 @@ CodeCompanion is a comprehensive and user-friendly web-based tool designed to su
 <a href="https://github.com/TechNodes2-0/CodeCompanion/issues"><img src="https://img.shields.io/github/issues/TechNodes2-0/CodeCompanion?color=0059b3"></a>
 <hr> 
 
-### [Click here](https://www.youtube.com/watch?v=sjpRIeGsFSQ) to watch the demo of this project
+### [Click here](https://youtu.be/Dv-p1q4Bl9A) to watch the demo of this project
 
 ## ⚙ What it does -
 Code Companion is a website that provides a variety of tools and features for software developers. It aims to make coding more accessible, efficient, and enjoyable. With features such as a code comment adder, space and time complexity and space complexity analyzer, code explainer, and error finder, Code Companion offers a comprehensive solution for software development needs. Whether you're a beginner or an experienced developer, Code Companion can help you write better code, understand your code's performance, and resolve errors. With its user-friendly interface and easy-to-use tools, Code Companion is the perfect companion for all your coding needs.
@@ -36,5 +36,23 @@ We learned use of API's, tailwind css and how to integrate services like OPENAI 
 ## ⏭ What's next for -
 We want to integrate compiler for various languages like Java, C++,C , python and etc. 2.Adding new features and tools to further improve the coding experience, such as code auto-completion, code suggestion, and code optimization.
 
+How to Host in  Local Host 
 
+## Installation 
 
+### 1 Clone Repository 
+```
+git clone "https://github.com/TechNodes2-0/CodeCompanion.git"
+```
+###  2 Open codeCompanion folder  with VS Code's integrated terminal and change the path using the following command
+```
+cd C:\Users\Admin\Desktop\Git\CodeCompanion\client
+```
+### 3 To host on localhost, write the following command
+```
+npm run dev
+``` 
+### 4 You got folllowing Link Like : 
+```
+http://localhost:5173/
+```
