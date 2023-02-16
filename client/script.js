@@ -2,7 +2,8 @@
 // import user from './assets/user.svg'
 const form=document.querySelector('form');
 // var chatContainer=document.querySelector('#chat_container');
-var chatContainer=document.getElementById('chat_container');
+var chatContainer=document.getElementById('comment');
+const op=document.getElementById('message');
 let loadinterval;
 var salt=" ";
 // const canvas = document.getElementById('myCanvas');
@@ -22,7 +23,7 @@ const timebtn = document.getElementById('time');
 if(timebtn)
 {
   time.addEventListener('click', function (e) {
-    salt = "        find space and time  complexity";
+    salt = "What is the time and space complexity of the given code?explain each with proper explanation";
     
     handleSubmit(e, salt);
   });
@@ -66,6 +67,13 @@ function loader(element)
     }
   },300);
 }
+
+
+
+
+
+
+
 function typeText(element, text) {
   let index = 0
 
@@ -91,10 +99,7 @@ function chatStripe(isAi, value, uniqueId) {
       <div class="wrapper ${isAi && 'ai'}">
           <div class="chat">
               <div class="profile">
-                  <img 
-                    src=${isAi ? bot : user} 
-                    alt="${isAi ? 'bot' : 'user'}" 
-                  />
+
               </div>
               <div class="message" id=${uniqueId}>${value}</div>
           </div>
@@ -114,11 +119,11 @@ const handleSubmit = async (e,salt) => {
 
 
   // user's chatstripe
-  //chatContainer.innerHTML += chatStripe(false, data.get('prompt'))
+ // chatContainer.innerHTML += chatStripe(false, data.get('prompt'))
   // chatContainer.innerHTML += "space complexity";
 
   // to clear the textarea input 
-  form.reset()
+ // form.reset()
 
   // bot's chatstripe
   const uniqueId = generateUniqueId()
@@ -130,8 +135,8 @@ const handleSubmit = async (e,salt) => {
   // specific message div 
   //const messageDiv = document.getElementById(uniqueId)
 
-  // messageDiv.innerHTML = "..."
-  //loader(messageDiv)
+  op.innerHTML = " "
+  loader(op)
 
   const response = await fetch('https://code-companion.onrender.com', {
       method: 'POST',
@@ -156,15 +161,15 @@ const handleSubmit = async (e,salt) => {
       ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
     };
   }
-  const op=document.getElementById('message');
+  
   if (response.ok) {
       const data = await response.json();
       const parsedData = data.bot.trim() // trims any trailing spaces/'\n' 
      // chatContainer=parsedData;
       // ctx.font = "32px serif";
      // ctx.fillText(parsedData, 20, 50);
-     op.innerHTML=parsedData;
-    // typeText(messageDiv, parsedData)
+    // op.innerHTML=parsedData;
+     typeText(op, parsedData)
       // drawer(parsedData);
   } else {
       const err = await response.text()
@@ -184,4 +189,3 @@ form.addEventListener('keyup', (e) => {
       // handleSubmit(e,salt)
   }
 })
-
