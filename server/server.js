@@ -47,5 +47,28 @@ app.post('/', async (req, res) => {
     res.status(500).send(error || 'Something went wrong');
   }
 })
+app.post('/img', async (req, res) => {
+  try {
+    const prompt = req.body.prompt;
+
+    const response = await openai.createImage({
+      prompt: `${prompt}`,
+      n: 1,
+      size: "256x256",
+    });
+    const image_url = response.data.data[0].url;
+
+    
+    // console.log(image_url);
+
+    res.status(200).send({
+      botimage: image_url
+    });
+
+  } catch (error) {
+    console.error(error)
+    res.status(500).send(error || 'Something went wrong');
+  }
+})
 
 app.listen(5000, () => console.log('AI server started on http://localhost:5000'))
